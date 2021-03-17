@@ -9,7 +9,7 @@ namespace task4
     class Point
     {
         private int firstPoint, secondPoint;
-        private string stringValue;
+        private string stringValue; // Зачем нам строковое поле? 
 
         public Point(int firstPoint, int secondPoint, string stringValue)
         {
