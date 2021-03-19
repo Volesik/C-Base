@@ -6,7 +6,14 @@ namespace task4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Point firstPoint = new Point(1, 2, "A");
+            Point secondPoint = new Point(3, 5, "B");
+            Point thirdPoint = new Point(4, 7, "C");
+
+            Figure figure = new Figure(firstPoint, secondPoint, thirdPoint);
+            figure.PerimeterCalculator();
+
+            Console.ReadKey();
         }
     }
 }

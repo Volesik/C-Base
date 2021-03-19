@@ -9,13 +9,13 @@ namespace task4
     class Point
     {
         private int firstPoint, secondPoint;
-        private string stringValue; // Зачем нам строковое поле? 
+        private string pointName; // Уже понял, с математикой плохо, особенно с координатами, вот это я изначально и не мог понять, что за задача и что за поинты. Но опять же таки можно вроде и без буквы обойтись в данном разрезе 
 
-        public Point(int firstPoint, int secondPoint, string stringValue)
+        public Point(int firstPoint, int secondPoint, string pointName)
         {
             this.firstPoint = firstPoint;
             this.secondPoint = secondPoint;
-            this.stringValue = stringValue;
+            this.pointName = pointName;
         }
 
         public int FirstPoint
@@ -34,11 +34,11 @@ namespace task4
             }
         }
 
-        public string StringValue
+        public string PointName
         {
             get
             {
-                return stringValue;
+                return pointName;
             }
         }
 

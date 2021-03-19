@@ -10,21 +10,46 @@ namespace task4
     {
         // Должны ли мы создавать Поля типа Point в начале? Если да, то 3, 4 или 5, т.к. по условию нужно разные конструкторы создавать.
         //Да, 5 штук, что бы можно было присвоить им значения через конструктор и использовать их в методах.
+        private Point a;
+        private Point b;
+        private Point c;
+        private Point d;
+        private Point e;
+        private double perimeter; 
         public Figure(Point a, Point b, Point c)
         {
-
+            this.a = a;
+            this.b = b;
+            this.c = c;
         }
 
-        public Figure(Point a, Point b, Point c, Point d)
+        public Figure(Point a, Point b, Point c, Point d) // Почему я не могу сделать перезагрузку таким способом? :this(Point a, Point b, Point c)
         {
-
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
         }
 
         public Figure(Point a, Point b, Point c, Point d, Point e)
         {
-
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+            this.e = e;
         }
 
-        
+        private double LengthSide(Point a, Point b)
+        {
+            double side = Math.Pow((b.FirstPoint - a.FirstPoint), 2) + Math.Pow((b.SecondPoint - b.FirstPoint), 2);
+            return Math.Sqrt(side);
+        }
+
+        public void PerimeterCalculator()
+        {
+            perimeter = LengthSide(a, b) + LengthSide(a, c) + LengthSide(b, c);
+            Console.WriteLine($"Периметр многоульника {perimeter}");
+        }
     }
 }
