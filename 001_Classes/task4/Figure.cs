@@ -62,6 +62,6 @@ namespace task4
             }
             
             Console.WriteLine($"Периметр многоульника {perimeter}");
-        }
+        } 
     }
 }
