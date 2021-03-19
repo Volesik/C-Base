@@ -48,7 +48,19 @@ namespace task4
 
         public void PerimeterCalculator()
         {
-            perimeter = LengthSide(a, b) + LengthSide(a, c) + LengthSide(b, c);
+            if (a != null && b != null && c != null && d != null && e != null)
+            {
+                perimeter = LengthSide(a, b) + LengthSide(b, c) + LengthSide(c, d) + LengthSide(d, e) + LengthSide(e, a);
+            }
+            else if(a != null && b != null && c != null && d != null )
+            {
+                perimeter = LengthSide(a, b) + LengthSide(b, c) + LengthSide(c, d) + LengthSide(a, d);
+            }
+            else
+            {
+                perimeter = LengthSide(a, b) + LengthSide(a, c) + LengthSide(b, c);
+            }
+            
             Console.WriteLine($"Периметр многоульника {perimeter}");
         }
     }
